@@ -28,30 +28,35 @@ void thumbPos(int pos)
 {
   deg = constrain(pos, thumbMin, thumbMax);
   thumb.write(pos);
+  delay(100);
 }
 
 void indexPos(int pos)
 {
   deg = constrain(pos, indexMin, indexMax);
   index.write(pos);
+  delay(100);
 }
 
 void middlePos(int pos)
 {
   deg = constrain(pos, middleMin, middleMax);
   middle.write(pos);
+  delay(100);
 }
 
 void ringPos(int pos)
 {
   deg = constrain(pos, ringMin, ringMax);
-  ring.write(pos); 
+  ring.write(pos);
+  delay(100); 
 }
 
 void littlePos(int pos)
 {
   deg = constrain(pos, littleMin, littleMax);
-  little.write(pos); 
+  little.write(pos);
+  delay(100); 
 }
 
 void palm()
@@ -69,7 +74,7 @@ void fist()
   indexPos(90);
   middlePos(20);
   ringPos(120);
-  littlePos(110); 
+  littlePos(110);
 }
 
 void count1()
@@ -78,7 +83,7 @@ void count1()
   indexPos(1);
   middlePos(20);
   ringPos(120);
-  littlePos(110); 
+  littlePos(110);
 }
 
 void count2()
@@ -87,12 +92,66 @@ void count2()
   indexPos(1);
   middlePos(110);
   ringPos(120);
-  littlePos(110); 
+  littlePos(110);
 }
 
 void count3()
 {
   thumbPos(120);
+  indexPos(1);
+  middlePos(110);
+  ringPos(30);
+  littlePos(110); 
+}
+
+void count4()
+{
+  thumbPos(120);
+  indexPos(1);
+  middlePos(110);
+  ringPos(30);
+  littlePos(1); 
+}
+
+void count5()
+{
+  thumbPos(40);
+  indexPos(1);
+  middlePos(110);
+  ringPos(30);
+  littlePos(1); 
+}
+
+void count6()
+{
+  thumbPos(80);
+  indexPos(90);
+  middlePos(20);
+  ringPos(120);
+  littlePos(110);
+}
+
+void count7()
+{
+  thumbPos(40);
+  indexPos(1);
+  middlePos(20);
+  ringPos(120);
+  littlePos(110);
+}
+
+void count8()
+{
+  thumbPos(40);
+  indexPos(1);
+  middlePos(110);
+  ringPos(120);
+  littlePos(110); 
+}
+
+void count9()
+{
+  thumbPos(40);
   indexPos(1);
   middlePos(110);
   ringPos(30);
@@ -111,13 +170,27 @@ void setup()
 void loop()
 {
   palm();
-  delay(3000);
+  delay(2000);
   fist();
-  delay(3000);
+  delay(2000);
   count1();
-  delay(3000);
+  delay(2000);
   count2();
-  delay(3000);
+  delay(2000);
   count3();
-  delay(3000);
+  delay(2000);
+  count4();
+  delay(2000);
+  count5();
+  delay(2000);
+  fist();
+  delay(2000);
+  count6();
+  delay(2000);
+  count7();
+  delay(2000);
+  count8();
+  delay(2000);
+  count9();
+  delay(2000);
 }
