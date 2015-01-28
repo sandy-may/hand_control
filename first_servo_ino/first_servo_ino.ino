@@ -193,14 +193,14 @@ void countTo9(int sleep)
   count8(sleep);
   count9(sleep);
 }
-
+//show thumb up
 void thumbUpSign(int sleep)
 {
   fist(500);
   thumbPos(thumbUp);
   delay(sleep);
 }
-
+//show horn sign
 void hornSign(int sleep)
 {
   fist(500);
