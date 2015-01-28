@@ -212,6 +212,7 @@ void hornSign(int sleep)
 void loop()
 {
   thumbUpSign(1000);
+  hornSign(1000);
   palm(1000);
   countTo9(1000);
 }
