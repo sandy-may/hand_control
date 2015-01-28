@@ -73,7 +73,7 @@ void palm(int sleep)
 void fist(int sleep)
 {
   thumbPos(thumbDown);
-  indexPos(90);
+  indexPos(indexDown);
   middlePos(middleDown);
   ringPos(ringDown);
   littlePos(littleDown);
@@ -133,7 +133,7 @@ void count5(int sleep)
 void count6(int sleep)
 {
   thumbPos(60);
-  indexPos(90);
+  indexPos(indexDown);
   middlePos(middleDown);
   ringPos(ringDown);
   littlePos(littleDown);
@@ -199,6 +199,14 @@ void thumbUpSign(int sleep)
   fist(500);
   thumbPos(thumbUp);
   delay(sleep);
+}
+
+void hornSign(int sleep)
+{
+  fist(500);
+  indexPos(indexUp);
+  littlePos(littleUp);
+  delay(sleep); 
 }
 //enter behaviours to loop here, with a delay of 1000ms (1s) or higher
 void loop()
