@@ -60,103 +60,114 @@ void littlePos(int pos)
   delay(100); 
 }
 //show palm
-void palm()
+void palm(int sleep)
 {
   thumbPos(40);
   indexPos(1);
   middlePos(110);
   ringPos(30);
   littlePos(1);
+  delay(sleep);
 }
 //show fist
-void fist()
+void fist(int sleep)
 {
   thumbPos(120);
   indexPos(90);
   middlePos(20);
   ringPos(120);
   littlePos(110);
+  delay(sleep);
 }
 //show number 1
-void count1()
+void count1(int sleep)
 {
   thumbPos(120);
   indexPos(1);
   middlePos(20);
   ringPos(120);
   littlePos(110);
+  delay(sleep);
 }
 //show number 2
-void count2()
+void count2(int sleep)
 {
   thumbPos(120);
   indexPos(1);
   middlePos(110);
   ringPos(120);
   littlePos(110);
+  delay(sleep);
 }
 //show number 3
-void count3()
+void count3(int sleep)
 {
   thumbPos(120);
   indexPos(1);
   middlePos(110);
   ringPos(30);
-  littlePos(110); 
+  littlePos(110);
+  delay(sleep); 
 }
 //show number 4
-void count4()
+void count4(int sleep)
 {
   thumbPos(120);
   indexPos(1);
   middlePos(110);
   ringPos(30);
   littlePos(1); 
+  delay(sleep);
 }
 //show number 5
-void count5()
+void count5(int sleep)
 {
   thumbPos(40);
   indexPos(1);
   middlePos(110);
   ringPos(30);
   littlePos(1); 
+  delay(sleep);
 }
 //show number 6
-void count6()
+void count6(int sleep)
 {
-  thumbPos(80);
+  thumbPos(60);
   indexPos(90);
   middlePos(20);
   ringPos(120);
   littlePos(110);
+  delay(sleep);
 }
 //show number 7
-void count7()
+void count7(int sleep)
 {
   thumbPos(40);
   indexPos(1);
   middlePos(20);
   ringPos(120);
   littlePos(110);
+  delay(sleep);
 }
 //show number 8
-void count8()
+void count8(int sleep)
 {
   thumbPos(40);
   indexPos(1);
   middlePos(110);
   ringPos(120);
-  littlePos(110); 
+  littlePos(110);
+  delay(sleep); 
 }
 //show number 9
-void count9()
+void count9(int sleep)
 {
   thumbPos(40);
   indexPos(1);
   middlePos(110);
   ringPos(30);
-  littlePos(110); 
+  littlePos(110);
+  delay(sleep); 
 }
 //attach servos to board ports
 void setup()
@@ -167,31 +178,32 @@ void setup()
   ring.attach(7);
   little.attach(8);
 }
+//auto count to 9 
+void countTo9(int sleep)
+{
+  fist(sleep);
+  count1(sleep);
+  count2(sleep);
+  count3(sleep);
+  count4(sleep);
+  count5(sleep);
+  fist(sleep);
+  count6(sleep);
+  count7(sleep);
+  count8(sleep);
+  count9(sleep);
+}
+
+void thumbUp(int sleep)
+{
+  fist(500);
+  thumbPos(40);
+  delay(sleep);
+}
 //enter behaviours to loop here, with a delay of 1000ms (1s) or higher
 void loop()
 {
-  palm();
-  delay(2000);
-  fist();
-  delay(2000);
-  count1();
-  delay(2000);
-  count2();
-  delay(2000);
-  count3();
-  delay(2000);
-  count4();
-  delay(2000);
-  count5();
-  delay(2000);
-  fist();
-  delay(2000);
-  count6();
-  delay(2000);
-  count7();
-  delay(2000);
-  count8();
-  delay(2000);
-  count9();
-  delay(2000);
+  thumbUp(1000);
+  palm(1000);
+  countTo9(1000);
 }
