@@ -24,41 +24,42 @@ int littleMax = 110;
 
 int deg = 0;
 
+//functions to set thumb position and acceptable limits
 void thumbPos(int pos)
 {
   deg = constrain(pos, thumbMin, thumbMax);
   thumb.write(pos);
   delay(100);
 }
-
+//functions to set index position and acceptable limits
 void indexPos(int pos)
 {
   deg = constrain(pos, indexMin, indexMax);
   index.write(pos);
   delay(100);
 }
-
+//functions to set middle position and acceptable limits
 void middlePos(int pos)
 {
   deg = constrain(pos, middleMin, middleMax);
   middle.write(pos);
   delay(100);
 }
-
+//functions to set ring position and acceptable limits
 void ringPos(int pos)
 {
   deg = constrain(pos, ringMin, ringMax);
   ring.write(pos);
   delay(100); 
 }
-
+//functions to set little position and acceptable limits
 void littlePos(int pos)
 {
   deg = constrain(pos, littleMin, littleMax);
   little.write(pos);
   delay(100); 
 }
-
+//show palm
 void palm()
 {
   thumbPos(40);
@@ -67,7 +68,7 @@ void palm()
   ringPos(30);
   littlePos(1);
 }
-
+//show fist
 void fist()
 {
   thumbPos(120);
@@ -76,7 +77,7 @@ void fist()
   ringPos(120);
   littlePos(110);
 }
-
+//show number 1
 void count1()
 {
   thumbPos(120);
@@ -85,7 +86,7 @@ void count1()
   ringPos(120);
   littlePos(110);
 }
-
+//show number 2
 void count2()
 {
   thumbPos(120);
@@ -94,7 +95,7 @@ void count2()
   ringPos(120);
   littlePos(110);
 }
-
+//show number 3
 void count3()
 {
   thumbPos(120);
@@ -103,7 +104,7 @@ void count3()
   ringPos(30);
   littlePos(110); 
 }
-
+//show number 4
 void count4()
 {
   thumbPos(120);
@@ -112,7 +113,7 @@ void count4()
   ringPos(30);
   littlePos(1); 
 }
-
+//show number 5
 void count5()
 {
   thumbPos(40);
@@ -121,7 +122,7 @@ void count5()
   ringPos(30);
   littlePos(1); 
 }
-
+//show number 6
 void count6()
 {
   thumbPos(80);
@@ -130,7 +131,7 @@ void count6()
   ringPos(120);
   littlePos(110);
 }
-
+//show number 7
 void count7()
 {
   thumbPos(40);
@@ -139,7 +140,7 @@ void count7()
   ringPos(120);
   littlePos(110);
 }
-
+//show number 8
 void count8()
 {
   thumbPos(40);
@@ -148,7 +149,7 @@ void count8()
   ringPos(120);
   littlePos(110); 
 }
-
+//show number 9
 void count9()
 {
   thumbPos(40);
@@ -157,7 +158,7 @@ void count9()
   ringPos(30);
   littlePos(110); 
 }
-
+//attach servos to board ports
 void setup()
 {
   thumb.attach(4);
@@ -166,7 +167,7 @@ void setup()
   ring.attach(7);
   little.attach(8);
 }
-
+//enter behaviours to loop here, with a delay of 1000ms (1s) or higher
 void loop()
 {
   palm();
